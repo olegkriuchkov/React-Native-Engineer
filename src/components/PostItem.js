@@ -8,9 +8,9 @@ class PostItem extends React.Component {
         return (
             <TouchableOpacity style={styles.view} onPress={this.props.clickItem}>
                 <Text style={styles.title}>{this.props.title}</Text>
-                <Text>Author: {this.props.author}</Text>
+                <Text style={styles.text}>Author: {this.props.author}</Text>
                 <OpenURLButton url={this.props.url}><Text style={styles.linkText}>{this.props.url}</Text></OpenURLButton>
-                <Text>Created at {new Date(this.props.createdAt).toLocaleString()}</Text>
+                <Text style={styles.text}>Created at {new Date(this.props.createdAt).toLocaleString()}</Text>
             </TouchableOpacity>
         )
     }
